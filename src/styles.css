@@ -1,1 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+div{
+    font-family:Sans-Serif;
+    margin-left:10px;
+}
+.vm{
+    margin-top:5px;
+    color:#00b386;
+}
+.vmno{
+    margin-bottom:10px;
+    
+}
+
+.cvm{
+    color:#00b386;
+    font-size: 30px;
+}
+.error{
+    margin-top:5px;
+    color:red;
+}
+.errorno{
+    margin-bottom:5px;
+    color:red;
+}
+.grey{
+    color:grey;
+    font-size: 10px;
+}
+
+.bussiness{
+    color:grey;
+    font-size: 15px;
+    
+}
+
+tr{
+    border-color:grey;
+    border-style:solid;
+}
+table {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    font-family: arial;
+    float :left;
+    margin-left: 130px;
+    margin-top: 120px;
+    background-color: whitesmoke;
+    }
