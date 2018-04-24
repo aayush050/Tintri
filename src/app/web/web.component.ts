@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TintriService } from '../tintri.service';
+import { HttpClient } from '@angular/common/http';
+HttpClient
 @Component({
   selector: 'app-web',
   template: `
@@ -31,11 +33,12 @@ import { TintriService } from '../tintri.service';
   styles: []
 })
 export class WebComponent implements OnInit {
-public tintri;
+public tintri = [];
   constructor(private Tintri:TintriService) { }
 
   ngOnInit() {
-    this.tintri=this.Tintri.getData();
+    this.Tintri.getData()
+    .subscribe(data =>this.tintri = data);
   }
 
 }
