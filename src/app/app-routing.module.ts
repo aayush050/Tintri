@@ -3,8 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { WebComponent } from './web/web.component';
 
 const routes: Routes = [
-  {path:'',redirectTo: 'web',pathMatch: 'full'},
-  {path:'web',component:WebComponent}
+  {path:'',component:WebComponent}
 ];
 
 @NgModule({

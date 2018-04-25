@@ -8,29 +8,32 @@ div{
     margin-top:5px;
     color:#00b386;
 }
-.vmno{
+.vmcount{
     margin-bottom:10px;
     
 }
 
-.cvm{
+.name{
     color:#00b386;
     font-size: 30px;
 }
-.error{
+.status{
     margin-top:5px;
     color:red;
 }
-.errorno{
+.errorcount{
     margin-bottom:5px;
+    
+}
+.error{
     color:red;
 }
-.grey{
+.path{
     color:grey;
     font-size: 10px;
 }
 
-.bussiness{
+.description{
     color:grey;
     font-size: 15px;
     
@@ -49,3 +52,20 @@ table {
     margin-top: 120px;
     background-color: whitesmoke;
     }
+    
+
+td {
+    border-color:grey;
+  border-collapse: separate;
+  
+  border-style: solid;
+  border-width: thin;
+}
+
+table {
+   background-color: grey;
+}
+
+td, th {
+  background-color: whitesmoke;
+}
