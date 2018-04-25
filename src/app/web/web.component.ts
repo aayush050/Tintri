@@ -6,7 +6,6 @@ HttpClient
   selector: 'app-web',
   template: `
   <html>
-  <div float="left">
   <table height="200" width="20%" border-style="solid" *ngFor="let data of tintri">
    <tr >
     <td colspan=2>
@@ -27,7 +26,7 @@ HttpClient
         </td>
     </tr>
     </table>  
-    </div>        
+        
   <html>
   `,
   styles: []

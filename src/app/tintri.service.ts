@@ -9,9 +9,6 @@ private _url: string = "/assets/data/tintri.json";
 
   constructor(private http:HttpClient) { }
 
-
-
-
 getData():Observable<Tintri[]>{
 return this.http.get<Tintri[]>(this._url);
 }
