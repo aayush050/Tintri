@@ -7,10 +7,19 @@ div{
 .vm{
     margin-top:5px;
     color:#00b386;
+    
 }
 .vmcount{
     margin-bottom:10px;
     
+}
+.vmborder{
+    border-top: 2px solid grey;
+    
+}
+.errorborder{
+    border-top: 2px solid grey;
+    border-left: 2px solid grey;
 }
 
 .name{
@@ -39,10 +48,7 @@ div{
     
 }
 
-tr{
-    border-color:grey;
-    border-style:solid;
-}
+
 table {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
@@ -53,19 +59,7 @@ table {
     background-color: whitesmoke;
     }
     
-
-td {
-    border-color:grey;
-  border-collapse: separate;
-  
-  border-style: solid;
-  border-width: thin;
-}
-
-table {
-   background-color: grey;
-}
-
 td, th {
   background-color: whitesmoke;
+
 }
