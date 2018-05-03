@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TintriService } from '../tintri.service';
 import { HttpClient } from '@angular/common/http';
+import { Router, Route } from '@angular/router';
 HttpClient
 @Component({
   selector: 'app-web',
@@ -10,7 +11,7 @@ HttpClient
   <table border="0" height="200" width="20%"  *ngFor="let data of tintri">
    <tr >
     <td colspan=2>
-    <div class="status"><img width="15" src="{{data.src}}"> <b> {{data.status}} </b> <img align ="right"  width = "30" src="http://2.bp.blogspot.com/_t2t0TocmM7M/STBhJF6P4-I/AAAAAAAAE3A/dnG7EPdL3Rw/s400/centerellipsis_l.gif"></div>
+    <div class="status"><img width="15" src="{{data.src}}"> <b> {{data.status}} </b>  <button type="submit" width="10"  (click)="deleteStat(data)">DEL</button> </div>
       <div class="name"><b>{{data.name}}</b></div>
       <div class="description"><b>{{data.description}}</b></div>
       <div class="path"><b>{{data.path}}</b></div>
@@ -35,13 +36,19 @@ HttpClient
 export class WebComponent implements OnInit {
 public tintri:any=[];
 public errorMessage;
-  constructor(private Tintri:TintriService) { }
+public data=[];
+  constructor(private _tintri:TintriService,private route:Router) { }
 
   ngOnInit() {
-    this.Tintri.getConfig()
+    
+    this._tintri.getConfig()
     .subscribe(data =>this.tintri = data,
                     error => this.errorMessage = error);
-    //this.tintri = this.Tintri.getConfig();
+    //this.tintri = this._tintri.getConfig();
   }
-
+deleteStat(data)
+{
+  this._tintri.deleteData(data._id).subscribe(data =>this.tintri = data);
+   
+}
 }
