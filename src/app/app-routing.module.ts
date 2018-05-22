@@ -5,8 +5,8 @@ import { InputComponent } from './input/input.component';
 
 
 const routes: Routes = [
-  {path:'',component:InputComponent},
-  {path:'web',component:WebComponent}
+  {path:'',component:InputComponent,},
+  {path:'VMs',component:WebComponent}
 ];
 
 @NgModule({

@@ -8,10 +8,11 @@ HttpClient
   template: `
   <html>
   <h1>{{errorMessage}}</h1>
+  <a href=routeToHome()>HOMEPAGE</a>
   <table border="0" height="200" width="20%"  *ngFor="let data of tintri">
    <tr >
     <td colspan=2>
-    <div class="status"><img width="15" src="{{data.src}}"> <b> {{data.status}} </b>  <button type="submit" width="10"  (click)="deleteStat(data)">DEL</button> </div>
+    <div class="status"><img width="15" src="{{data.src}}"> <b> {{data.status}} </b>  <img src="https://png.icons8.com/metro/1600/close-window.png" width="15px" class="img" (click)="deleteStat(data)"> </div>
       <div class="name"><b>{{data.name}}</b></div>
       <div class="description"><b>{{data.description}}</b></div>
       <div class="path"><b>{{data.path}}</b></div>
@@ -49,6 +50,12 @@ public data=[];
 deleteStat(data)
 {
   this._tintri.deleteData(data._id).subscribe(data =>this.tintri = data);
+  window.location.reload();
    
+}
+routeToHome()
+{
+  this.route.navigate(['/input']);
+  
 }
 }

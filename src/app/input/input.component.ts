@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { TintriService } from '../tintri.service';
 import { HttpClient } from '@angular/common/http';
@@ -21,7 +21,7 @@ import { HttpClient } from '@angular/common/http';
   styles: []
 })
 export class InputComponent implements OnInit {
-  
+  public flag=false;
   status: string;
   name: string;
   description: string;
@@ -39,12 +39,16 @@ export class InputComponent implements OnInit {
      this._tintri.addData(this._tintri.getTintriData())
      .subscribe(data =>this.tintri = data,
                      error => this.errorMessage = error);
-    
+  if(this.flag==true)
+  {
+    window.location.reload();
+    this.flag=false;
   }
-
+  }
+  
   routeToWeb(status, name, description, path, vmcount, error) {
 
-if(status=='OK')
+if(status=='OK' || status=='ok' || status=='okay'|| status=='OKAY')
 {
   this.source='http://images.all-free-download.com/images/graphicthumb/green_globe_ok_tic_584.jpg';
 }
@@ -61,8 +65,11 @@ else{
       "number": vmcount,
       "error": error
     }
+    
     this._tintri.innerdata.push(data);
-      this._tintri.addData(data).subscribe(data =>this.tintri = data);
-      this.route.navigate(['/web']);
-    }          
+  
+    this._tintri.addData(data).subscribe(data =>this.tintri = data);
+    this.route.navigate(['/VMs']);
+    window.location.reload();
+  }         
  }

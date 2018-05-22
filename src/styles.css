@@ -98,3 +98,27 @@ input[type=submit]:hover {
     left: 45%;
     margin: -100px 0 0 -150px;
 }
+button[type=submit]{
+
+    width: 16px;
+    float:right;
+    font-size:small;
+    background-color: rgb(68, 71, 68);
+    color: white;
+    align-content:left;
+    border: none;
+    cursor: pointer;
+}
+button[type=submit]:hover {
+    background-color: #000000;
+}
+.img{
+    float:right;
+}
+a{
+    position: absolute;
+    right: 50px;
+    top: 40px;
+    color:black;
+    text-decoration: none;
+}
